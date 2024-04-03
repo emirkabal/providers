@@ -47,6 +47,7 @@ export async function getMovieMediaDetails(id: string): Promise<MovieMedia> {
   return {
     type: 'movie',
     title: movie.title,
+    originalTitle: movie.original_title,
     releaseYear: Number(movie.release_date.split('-')[0]),
     tmdbId: id,
     imdbId: movie.imdb_id,
@@ -86,6 +87,7 @@ export async function getShowMediaDetails(id: string, seasonNumber: string, epis
   return {
     type: 'show',
     title: series.name,
+    originalTitle: series.original_name,
     releaseYear: Number(series.first_air_date.split('-')[0]),
     tmdbId: id,
     episode: {

@@ -29,7 +29,7 @@ async function universalScraper(ctx: MovieScrapeContext | ShowScrapeContext): Pr
 export const puhuScraper = makeSourcerer({
   id: 'puhu',
   name: 'puhu',
-  rank: 50,
+  rank: 125,
   flags: [flags.CORS_ALLOWED],
   scrapeShow: universalScraper,
   scrapeMovie: universalScraper,
